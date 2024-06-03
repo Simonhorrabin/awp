@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .facility-table {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<a href="todo.html" target="_blank" class="button">To-do List</a>
+
+<body>
+    <h1>Candidate Tracking</h1>
+
+    <form id="candidate-form">
+        <label for="candidate-name">Candidate:</label>
+        <input type="text" id="candidate-name" name="candidate-name" required><br>
+
+        <label for="facility">Facility:</label>
+        <select id="facility" name="facility" required>
+            <option value="Asheville">Asheville</option>
+            <option value="Raleigh">Raleigh</option>
+            <option value="Greeneville">Greeneville</option>
+        </select><br>
+
+        <label for="drug-test">Drug Test:</label>
+        <select id="drug-test" name="drug-test" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+
+        <label for="drug-test-passed">Drug Test Passed:</label>
+        <select id="drug-test-passed" name="drug-test-passed" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="N/A">N/A</option>
+        </select><br>
+
+        <label for="drug-test-expiration">Drug Test Expiration Date:</label>
+        <input type="date" id="drug-test-expiration" name="drug-test-expiration" required><br>
+
+        <label for="background-check">Background Check:</label>
+        <select id="background-check" name="background-check" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+
+        <label for="background-check-passed">Background Check Passed:</label>
+        <select id="background-check-passed" name="background-check-passed" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="N/A">N/A</option>
+        </select><br>
+
+        <button type="submit">Add Candidate</button>
+    </form>
+
+    <div id="facility-tables">
+        <div class="facility-table">
+            <h2>Asheville</h2>
+            <table id="asheville-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Date</th>
+                        <th>Drug Test</th>
+                        <th>Drug Test Passed</th>
+                        <th>Drug Test Expiration Date</th>
+                        <th>Background Check</th>
+                        <th>Background Check Passed</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="facility-table">
+            <h2>Raleigh</h2>
+            <table id="raleigh-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        
+                        <th>Drug Test</th>
+                        <th>Drug Test Passed</th>
+                        <th>Drug Test Expiration Date</th>
+                        <th>Background Check</th>
+                        <th>Background Check Passed</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="facility-table">
+            <h2>Greeneville</h2>
+            <table id="greeneville-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Drug Test</th>
+                        <th>Drug Test Passed</th>
+                        <th>Drug Test Expiration Date</th>
+                        <th>Background Check</th>
+                        <th>Background Check Passed</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <canvas id="drugTestChart" width="400" height="200"></canvas>
+    <canvas id="bgCheckChart" width="400" height="200"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
