@@ -40,3 +40,26 @@ body{
     color: #fff;
     font-size: 16px;
 }
+
+.todo-input::placeholder {
+    border: none;
+    outline: none;
+    color: #acbbc5;
+}
+
+.add-button{
+    border: none;
+    outline: none;
+    background: #acbbc5;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.empty-image{
+    margin: 55px auto 0;
+    display: block;
+}
